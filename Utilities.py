@@ -1,10 +1,10 @@
-from Gamble import Gamble
+# from Gamble import Bet
+# from Fmess import *
 from colorama import Fore, Back, Style
 # function to import numbers from 1 - 10:
 def randomfunten():
     import random
     return random.randrange(1, 10)
-
 
 # function to import numbers from 1 - 20
 def randomfuntwenty():
@@ -34,7 +34,8 @@ firstdraw(secondlist)
 
 
 
-# function to find matching last number in a two list
+# function to find matching last number in two list
+# will be used to find the gold ball
 def findmetwo(a, b):
     count = 0
     if a[len(a) - 1:] == b[len(a) - 1:]:
@@ -44,7 +45,7 @@ def findmetwo(a, b):
         return "no"
 
 
-# function to find all matching numbers in a list except the last numbers
+# function to find all matching numbers in two lists except skipping the last index
 # will be used for checking white balls
 def findme(a, b):
     countme = 0
@@ -86,10 +87,29 @@ def findme(a, b):
 
 
 
+#function to change list color
+def colors(a):
+    a = Fore.LIGHTMAGENTA_EX+str(sorted(a[:len(a)-1]))+Style.RESET_ALL+\
+        Fore.YELLOW+str(a[-1])+Style.RESET_ALL
+    return a
 
-# def summytotal(a,b):
-#     a - b
-#     while  a >= 5:
-#         return "you have",a+"$"+"left"
-#     else:
-#         return "you have",a+"$"+"left its not enough to participate\ngoodbye"
+
+def changetest(a):
+    n = str
+    for i in (a):
+        n = str(n)+""+str(i)
+    return  n
+
+
+
+
+
+
+def summytotal(a,b):
+    a - b
+    while  a >= 5:
+        return "you have",a+"$"+"left"
+    else:
+        return "you have",a+"$"+"left its not enough to participate\ngoodbye"
+
+

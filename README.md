@@ -1,4 +1,5 @@
 # PowerBall-Project-
+Author: eli
 Python programming project , display today’s Powerball winning numbers, your lucky numbers, and display the result based on your lucky numbers against Today’s Powerball winning numbers.
 1.The Powerball game includes two parts
 2.Part one includes 5 numbers. These five numbers are white ball numbers, which are drawn randomly from 20 numbers from 1 to 20 inclusively - (1,2,3, 4, 5, … , 17,18,19, 20).
