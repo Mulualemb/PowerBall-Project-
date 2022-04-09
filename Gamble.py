@@ -1,8 +1,9 @@
 class Bet:
     def __init__(self,name,age,money):
         self.name = name
-        self.age = age
-        self.money = money
+        self.age = int(age)
+        self.money = int(money)
+
     def getName(self):
         return self.name
 
@@ -26,8 +27,3 @@ class Bet:
 
     def __str__(self):
         return str(self.name)+" "+str(self.age)+" "+str(self.money)
-
-
-
-
-

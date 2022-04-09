@@ -1,10 +1,12 @@
-# from Gamble import Bet
-# from Fmess import *
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
+
 # function to import numbers from 1 - 10:
 def randomfunten():
     import random
     return random.randrange(1, 10)
+
+
+
 
 # function to import numbers from 1 - 20
 def randomfuntwenty():
@@ -12,7 +14,10 @@ def randomfuntwenty():
     return random.randrange(1, 20)
 
 
+
+
 # function to add random numbers to a list with no duplicate!
+# the second if statement can be removed to allow the last number to have duplicates
 firstlist = list()
 secondlist = list()
 def firstdraw(a):
@@ -25,6 +30,8 @@ def firstdraw(a):
         c = randomfunten()
         if c not in a:
             a.append(c)
+
+
 
 
 #call list functions
@@ -45,6 +52,8 @@ def findmetwo(a, b):
         return "no"
 
 
+
+
 # function to find all matching numbers in two lists except skipping the last index
 # will be used for checking white balls
 def findme(a, b):
@@ -57,59 +66,48 @@ def findme(a, b):
 
 
 
-# calculate and return the money you earn
-# running everything now, winning_amount function require two parameters
-# and this two parameters each has its own two parameters
-# example winning_amount(a,b),but a and b also have 2 parameters,so it will look like winning_amount(A(a,b),B(a,b))
-# print(winning_amount(findme(firstlist, secondlist), findmetwo(firstlist, secondlist)))
 
-# def winning_amount(a, b):
-#     if a == 0 and b == 1:
-#         return "you won 4$"
-#     elif a == 1 and b == 1:
-#         return "you won 4$"
-#     elif a == 2 and b == 1:
-#         return "you won 7$"
-#     elif a == 3 and b == "no":
-#         return "you won 7$"
-#     elif a == 3 and b == 1:
-#         return "you won 100$"
-#     elif a == 4 and b == "no":
-#         return "you won 100$"
-#     elif a == 4 and b == 1:
-#         return "you won 10,000$"
-#     elif a == 5 and b == "no":
-#         return "you won 1,000,000$"
-#     elif a == 5 and b == 1:
-#         return "you won 324,000,000$"
+# this function will print a list without bracket and with colors
+# first part sort the list except for the last index
+# second part remove the brackets from the list and add colors
+def noBracketpluscolor(a):
+    b = sorted(a[:-1])
+    s = ""
+    for i in b:
+        s = s + str(i) + " "
+    return Fore.MAGENTA+s[:-1]+Style.RESET_ALL + " " + Fore.LIGHTYELLOW_EX+str(a[-1])+Style.RESET_ALL
+
+
+
+
+
+
+
+
+
+
+
+
+
+#####tests######
+# def testchangetest(a):
+#     n = str
+#     for i in (a):
+#         n = str(n)+""+str(i)
+#     return n
+#
+# test
+# def tessummytotaltest(a,b):
+#     a - b
+#     while  a >= 5:
+#         return "you have",a+"$"+"left"
 #     else:
-#         return "try again"
+#         return "you have",a+"$"+"left its not enough to participate\ngoodbye"
 
+    # test how to print all all numbers in a list except the last number
+    # print(firstlist[:len(firstlist)-1])
 
-
-#function to change list color
-def colors(a):
-    a = Fore.LIGHTMAGENTA_EX+str(sorted(a[:len(a)-1]))+Style.RESET_ALL+\
-        Fore.YELLOW+str(a[-1])+Style.RESET_ALL
-    return a
-
-
-def changetest(a):
-    n = str
-    for i in (a):
-        n = str(n)+""+str(i)
-    return  n
-
-
-
-
-
-
-def summytotal(a,b):
-    a - b
-    while  a >= 5:
-        return "you have",a+"$"+"left"
-    else:
-        return "you have",a+"$"+"left its not enough to participate\ngoodbye"
+    # test how to print only the last number in a list
+    # print(firstlist[len(firstlist
 
 

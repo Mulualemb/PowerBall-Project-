@@ -1,11 +1,7 @@
-from Gamble import Bet
-from Utilities import *
-from Fmess import *
-
-# winning_amount(findme(firstlist,secondlist),findmetwo(firstlist,secondlist))
-# print(startGame())
-# print(Fore.YELLOW+str(firstlist[-1])+Style.RESET_ALL)
-# print(colors(firstlist))
-print(changetest(firstlist))
-
-
+from Messages.PrintFunctions import *
+#run
+# startgame function receive name,age,money and kick user under 18#
+startGame()
+#startgamble function
+startGamble()
+# print(user1)
