@@ -2,7 +2,7 @@ from Gamble import Bet
 from Utilities import *
 
 
-#the game first message to the user,
+#the user recive 3 inputs if he doesnt enter the proper value the question will loop
 user1 = Bet("a",0,0)
 def startGame():
     print("welcome to the game! good luck")
@@ -12,14 +12,14 @@ def startGame():
             user1.setAge(int(input(f"hello {user1.getName()}, how old are you?:")))
             break
         except ValueError:
-            print("enter a number:")
+            print("enter a number!")
     if user1.age >= 18 :
         while True:
             try:
                 user1.setMoney(int(input(f"{user1.getName()} how much money, you want to gamble?:")))
                 break
             except ValueError:
-                print("enter a number please:")
+                print("enter a number!")
     else:
         print(f"{user1.name} this game,is not for you!! bye bye"),exit()
 

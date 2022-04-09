@@ -1,7 +1,7 @@
 from Messages.PrintFunctions import *
 #run
-# startgame function receive name,age,money and kick user under 18#
+# startgame function receive name,age,money.
 startGame()
-#startgamble function
+#startgamble function draw a list, if user type 'y' to play the game start,every round lists reset.
 startGamble()
-# print(user1)
+

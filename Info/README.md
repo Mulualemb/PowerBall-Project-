@@ -27,5 +27,3 @@ All Other situations – display “try again!”
 
 code by eli, other info from python class assignment
 
-problems:
-none integer input inside get.age and get.money break the code
